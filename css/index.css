@@ -1,0 +1,486 @@
+/* { outline: 1px solid green; }*/
+
+a:hover {
+  text-decoration: underline;
+}
+
+/** 
+ * FRONT PAGE
+ *
+ */
+
+/* Main div that controls all elements */
+#container {
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  position: relative;
+
+  /* Background properties */
+  background-position: center;
+  background-image: url("../img/windsurf5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Extra color on top of the background image */
+#overlay {
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/**
+ * FRONT PAGE: Header
+ *
+ */
+
+/* The beautiful header at the top */
+header {
+  position: relative;
+  color: white;
+  width: 100%;
+  height: auto;
+
+  /* The fancy header line your mom always dreamed about */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+
+  /* background-color: rgba(155, 142, 125, 0.4); */
+  background-color: rgba(0, 30, 0, 0.4);
+
+  transition: 0.5s;
+}
+
+/* The content within the header */
+#header-content {
+  color: white;
+  height: 100px;
+
+  /* Flexbox <3 */
+  display: flex;
+  align-items: center;
+
+  padding-top: 0px;
+}
+
+/**
+ * FRONT PAGE: Header: name
+ *
+ */
+
+#myname {
+  flex: 1;
+}
+
+/* Name */
+#name {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+/**
+ * FRONT PAGE: Header: icons
+ *
+ */
+
+#social {
+  position: relative;
+  display: flex;
+  width: auto;
+}
+
+#social-content {
+  position: relative;
+  display: flex;
+}
+
+.icon {
+  position: relative;
+  width: 48px;
+  height: 48px;
+}
+
+/* Add distance between icons */
+.icon:not(:last-child) {
+  margin-right: 30px;
+}
+
+.myicon {
+  width: 100%;
+  height: 100%;
+
+  -webkit-transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -o-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.bottom {
+  position: absolute;
+  opacity: 0;
+}
+
+.top:hover {
+  opacity: 0;
+}
+
+.bottom:hover {
+  opacity: 1;
+}
+
+/**
+ * FRONT PAGE: Main: arrow with animation
+ *
+ */
+#arrow span {
+  position: absolute;
+  bottom: 100px;
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 60px;
+  border-left: 5px solid #fff;
+  border-bottom: 5px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb05 2s infinite;
+  animation: sdb05 2s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb05 {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+@keyframes sdb05 {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+
+/**
+ * ABOUT
+ *
+ */
+#about {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  left: 0px;
+  top: 0px;
+  position: relative;
+
+  background-color: rgb(0, 15, 60);
+
+  /* Put profile picture and info next to each other */
+  display: flex;
+}
+
+#profile {
+  flex: 1;
+
+  /* Center the content */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#profile-pic {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin-left: auto;
+  margin-right: 30px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#profile-img {
+  width: 100%;
+  height: 100%;
+}
+
+#aboutme {
+  width: 50%;
+  height: 100%;
+  position: relative;
+
+  /* Center horizontally */
+  margin-left: auto;
+  margin-right: auto;
+
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+/* Div inside the content that allows padding */
+#aboutme-content {
+  width: calc(100% - 50px);
+  max-width: 1200px;
+  height: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  left: 25px;
+  position: relative;
+}
+
+#aboutme h2,
+#aboutme table {
+  color: white;
+}
+
+/* Make first row bold (and give it a larger width than minimum) */
+td:first-child {
+  font-weight: bold;
+  padding-right: 30px;
+}
+
+/**
+ * CONTENT
+ *
+ */
+.article {
+  width: 100%;
+  height: auto;
+  left: 0px;
+  top: 0px;
+  position: relative;
+  background-color: white;
+  padding-bottom: 30px;
+}
+
+/* Div inside the content that allows padding */
+.article-content {
+  width: calc(100% - 200px);
+  max-width: 1200px;
+  height: auto;
+  position: relative;
+  padding-top: 30px;
+
+  /* Center horizontally */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#parent {
+  top: 20px;
+}
+
+.article h1 {
+  padding-bottom: 20px;
+  font-size: 46px;
+  color: rgb(0, 20, 80);
+}
+
+h2 {
+  font-size: 36px;
+}
+
+.child {
+  position: relative;
+  width: 210px;
+  height: 260px;
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+
+  /* Fancy stuff */
+  transition: 0.3s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.child img {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 64px;
+  height: 64px;
+}
+
+/**
+ * Footer
+ *
+ */
+footer {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  background-color: rgb(0, 20, 80);
+  color: rgba(255, 255, 255, 0.4);
+
+  display: flex;
+  align-items: center;
+}
+
+/* Parent-child customization */
+
+/* Put childs below each other */
+@media only screen and (max-width: 850px) {
+  #header-content {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  #parent {
+    height: auto;
+  }
+  #parent {
+    top: 0px;
+  }
+
+  .child {
+    width: calc(100% - 100px);
+    height: 160px;
+    height: auto;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .child img {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .child:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .article-content {
+    width: calc(100% - 100px);
+  }
+
+  #parent {
+    width: calc(100% - 50px);
+  }
+
+  .article h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+}
+
+/* Make parent bigger to increase distance between childs */
+@media only screen and (max-width: 1020px) {
+  #parent {
+    width: calc(100% - 40px);
+  }
+}
+
+/* Make boxes bigger */
+@media only screen and (min-width: 1220px) {
+  .child {
+    width: 260px;
+  }
+}
+
+@media only screen and (min-width: 851px) {
+  #parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin-bottom: 40px;
+  }
+
+  .child1 {
+    left: 0px;
+  }
+  .child2 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .child3 {
+    margin-right: 0px;
+  }
+}
+
+/**
+ * Custom mobile settings
+ *
+ */
+@media only screen and (max-width: 650px) {
+  #table table {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #header-content {
+    text-align: center;
+    display: inline;
+  }
+
+  #myname {
+    /* Center horizontally */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #name {
+    font-size: 46px;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  #social-content {
+    /* Center horizontally */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #about {
+    /* Put profile picture and info next to each other */
+    display: block;
+  }
+
+  #profile-pic {
+    /* Center the image */
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-bottom: 0px;
+
+    width: 150px;
+    height: 150px;
+  }
+
+  #aboutme {
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  #aboutme-content {
+    padding-top: 25px;
+  }
+
+  .article-content,
+  .child {
+    width: calc(100% - 40px);
+  }
+}

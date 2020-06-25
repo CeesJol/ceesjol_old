@@ -33,7 +33,7 @@
     <meta name="title" content="Cees Jol" />
     <meta
       name="description"
-      content="Computer Science & Engineering @TUDelft. EJ4+ 2019 @Proteus-Eretes"
+      content="Computer Science & Engineering @TUDelft. EJ4+ 2019, MGM 2020 @Proteus-Eretes"
     />
     <meta
       name="keywords"
@@ -62,8 +62,16 @@
                 <!-- Instagram -->
                 <div class="icon">
                   <a href="https://instagram.com/ceesjol" target="_blank">
-                    <img class="myicon bottom" src="img/insta_color.png" alt="Instagram" />
-                    <img class="myicon top" src="img/insta.png" alt="Instagram" />
+                    <img
+                      class="myicon bottom"
+                      src="img/insta_color.png"
+                      alt="Instagram"
+                    />
+                    <img
+                      class="myicon top"
+                      src="img/insta.png"
+                      alt="Instagram"
+                    />
                   </a>
                 </div>
 
@@ -84,15 +92,27 @@
                     href="https://www.linkedin.com/in/cees-jol-53148218b/"
                     target="_blank"
                   >
-                    <img class="myicon bottom" src="img/linkedin_color.png" alt="Linkedin" />
-                    <img class="myicon top" src="img/linkedin.png" alt="Linkedin" />
+                    <img
+                      class="myicon bottom"
+                      src="img/linkedin_color.png"
+                      alt="Linkedin"
+                    />
+                    <img
+                      class="myicon top"
+                      src="img/linkedin.png"
+                      alt="Linkedin"
+                    />
                   </a>
                 </div>
 
                 <!-- Email -->
                 <div class="icon">
                   <a href="mailto:info@ceesjol.nl">
-                    <img class="myicon bottom" src="img/email_color.png" alt="Email" />
+                    <img
+                      class="myicon bottom"
+                      src="img/email_color.png"
+                      alt="Email"
+                    />
                     <img class="myicon top" src="img/email.png" alt="Email" />
                   </a>
                 </div>
@@ -115,7 +135,11 @@
       <!-- LEFT: profile picture -->
       <div id="profile">
         <div id="profile-pic">
-          <img id="profile-img" src="img/roei profielfoto.png" alt="Cees Jol profile picture 2019" />
+          <img
+            id="profile-img"
+            src="img/roei profielfoto.png"
+            alt="Cees Jol profile picture 2019"
+          />
         </div>
       </div>
 
@@ -358,8 +382,14 @@
     <!-- FOOTER -->
     <footer>
       <div class="article-content" style="padding: 0;">
-        <p><b>&copy; 2019 Cees Jol</b></p>
+        <p>
+          <b>&copy; <span id="year"></span> Cees Jol</b>
+        </p>
       </div>
-    </footer>
+		</footer>
+		
+		<script>
+      document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
   </body>
 </html>

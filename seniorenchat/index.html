@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Redirecting to CoronaChat...</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129727291-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-129727291-1');
+    </script>
+
+  </head>
+
+  <body>
+    <h1>SeniorenChat</h1>
+    <p>U wordt omgeleid naar <a href="https://seniorenchat.herokuapp.com/">CoronaChat</a>...</p>
+
+    <script>
+      window.location.replace("https://seniorenchat.herokuapp.com/" + window.location.search);
+    </script>
+  </body>
+</html>
